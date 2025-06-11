@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/aiseall/SmartMediaHub/img/smartmedialgog.jpeg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/aiseall/SmartMediaHub/img/smartmedialgog.jpeg">
+    <source media="(prefers-color-scheme: dark)" srcset="[https://raw.githubusercontent.com/aiseall/SmartMediaHub/img/smartmedialgog.jpeg](https://github.com/aiseall/SmartMediaHub/img/smartmedialgog.jpeg)">
+    <source media="(prefers-color-scheme: light)" srcset="[https://raw.githubusercontent.com/aiseall/SmartMediaHub/img/smartmedialgog.jpeg](https://github.com/aiseall/SmartMediaHub/img/smartmedialgog.jpeg)">
     <img alt="SmartMediaHub banner" src="https://github.com/aiseall/SmartMediaHub/img/smartmedialgog.jpeg">
   </picture>
   <br>
