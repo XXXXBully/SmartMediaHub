@@ -1,3 +1,27 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/aiseall/SmartMediaHub/img/smartmedialgog.jpeg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/aiseall/SmartMediaHub/img/smartmedialgog.jpeg">
+    <img alt="SmartMediaHub banner" src="https://github.com/aiseall/SmartMediaHub/img/smartmedialgog.jpeg">
+  </picture>
+  <br>
+  <a href="https://github.com/iamgio/quarkdown/wiki"><img alt="Wiki" src="https://img.shields.io/badge/wiki-read-darkcyan"></a>
+  <a href="https://quarkdown.com/docs"><img alt="Docs" src="https://img.shields.io/badge/docs-read-blue"></a>
+  <a href="https://github.com/iamgio/quarkdown/releases/latest"><img alt="Release" src="https://img.shields.io/github/v/release/iamgio/quarkdown?color=mediumseagreen"></a>
+  <a href="https://pinterest.github.io/ktlint"><img alt="FMT: Ktlint" src="https://img.shields.io/badge/fmt-ktlint-7f52ff?logo=kotlin&logoColor=f5f5f5"></a>
+  <a href="https://www.codefactor.io/repository/github/iamgio/quarkdown"><img alt="CodeFactor" src="https://www.codefactor.io/repository/github/iamgio/quarkdown/badge/main"></a>
+  <br>
+  <br>
+    <strong>Download</strong>
+  <br>
+  <a href="https://github.com/aiseall/SmartMediaHub/releases/tag/latest">Latest</a>
+  &nbsp; | &nbsp;
+  <strong><a href="https://github.com/aiseall/SmartMediaHubreleases/latest">Stable</a></strong>&nbsp;
+  <br>
+  <hr>
+</p>
+
+
 # 智媒通（SmartMediaHub）
 
 ![SmartMediaHub Logo](img/smartmedialgog.jpeg)
