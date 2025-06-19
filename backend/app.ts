@@ -13,6 +13,7 @@ import geminiRoutes from './routes/geminiRoutes';
 import ttsRoutes from './routes/ttsRoutes';
 import asrRoutes from './routes/asrRoutes';
 import videoGenRoutes from './routes/videoGenRoutes';
+import depsRoutes from './routes/depsRoutes';
 
 const app = express();
 
@@ -32,6 +33,7 @@ app.use('/api/gemini', geminiRoutes);
 app.use('/api/tts', ttsRoutes);
 app.use('/api/asr', asrRoutes);
 app.use('/api/video-gen', videoGenRoutes);
+app.use('/api/deps', depsRoutes);
 
 app.get('/', (req, res) => {
   res.send('欢迎使用智媒通（SmartMediaHub）API！');

@@ -5,6 +5,7 @@ import PlatformAccounts from './pages/PlatformAccounts';
 import ContentPublish from './pages/ContentPublish';
 import ScheduledPublish from './pages/ScheduledPublish';
 import DataStatistics from './pages/DataStatistics';
+import DependencyManager from './pages/DependencyManager';
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -22,6 +23,7 @@ function App() {
         <Route path="/content-publish" element={<ContentPublish />} />
         <Route path="/scheduled-publish" element={<ScheduledPublish />} />
         <Route path="/data-statistics" element={<DataStatistics />} />
+        <Route path="/dependency-manager" element={<DependencyManager />} />
         {/* 其他路由可以在这里添加 */}
       </Routes>
       <div>
