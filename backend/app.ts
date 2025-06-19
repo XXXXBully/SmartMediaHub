@@ -6,6 +6,10 @@ import contentRoutes from './routes/contentRoutes';
 import scheduledPublishRoutes from './routes/scheduledPublishRoutes';
 import statisticsRoutes from './routes/statisticsRoutes';
 import analyticsRoutes from './routes/analyticsRoutes';
+import deepseekRoutes from './routes/deepseekRoutes';
+import qwenRoutes from './routes/qwenRoutes';
+import openaiRoutes from './routes/openaiRoutes';
+import geminiRoutes from './routes/geminiRoutes';
 
 const app = express();
 
@@ -18,6 +22,10 @@ app.use('/api/contents', contentRoutes);
 app.use('/api/scheduled-publish', scheduledPublishRoutes);
 app.use('/api/statistics', statisticsRoutes);
 app.use('/api/analytics', analyticsRoutes);
+app.use('/api/deepseek', deepseekRoutes);
+app.use('/api/qwen', qwenRoutes);
+app.use('/api/openai', openaiRoutes);
+app.use('/api/gemini', geminiRoutes);
 
 app.get('/', (req, res) => {
   res.send('欢迎使用智媒通（SmartMediaHub）API！');
