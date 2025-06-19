@@ -10,6 +10,9 @@ import deepseekRoutes from './routes/deepseekRoutes';
 import qwenRoutes from './routes/qwenRoutes';
 import openaiRoutes from './routes/openaiRoutes';
 import geminiRoutes from './routes/geminiRoutes';
+import ttsRoutes from './routes/ttsRoutes';
+import asrRoutes from './routes/asrRoutes';
+import videoGenRoutes from './routes/videoGenRoutes';
 
 const app = express();
 
@@ -26,6 +29,9 @@ app.use('/api/deepseek', deepseekRoutes);
 app.use('/api/qwen', qwenRoutes);
 app.use('/api/openai', openaiRoutes);
 app.use('/api/gemini', geminiRoutes);
+app.use('/api/tts', ttsRoutes);
+app.use('/api/asr', asrRoutes);
+app.use('/api/video-gen', videoGenRoutes);
 
 app.get('/', (req, res) => {
   res.send('欢迎使用智媒通（SmartMediaHub）API！');
