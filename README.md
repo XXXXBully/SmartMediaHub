@@ -23,7 +23,6 @@
 
 # 智媒通（SmartMediaHub）
 
-![SmartMediaHub Logo](smartmedialgog.jpeg)
 
 ## 项目简介
 智媒通是一个智能自媒体管理平台，支持头条号、公众号、抖音、小红书、哔哩哔哩一键发布，定时发布，阅读状态，用户活动等智能管理。平台深度集成了 DeepSeek、Qwen（通义千问）、OpenAI（GPT-3.5/4、DALL·E）、Gemini（Google Gemini）等主流大模型，支持智能生成文本、图片等多模态内容，实现一句话创作爆款自媒体文章和视频，并可一键分发到各大内容平台。
