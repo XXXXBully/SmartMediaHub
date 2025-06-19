@@ -1,7 +1,8 @@
 <p align="center">
-  <picture>
-    ![SmartMediaHub Logo](img/smartmedialgog.jpeg)
-  </picture>
+  <a href="https://github.com/aiseall/SmartMediaHub">
+    <img src="assets/logo.png" alt="Logo" width="300">
+  </a>
+</p>
   <br>
   <a href="https://github.com/iamgio/quarkdown/wiki"><img alt="Wiki" src="https://img.shields.io/badge/wiki-read-darkcyan"></a>
   <a href="https://quarkdown.com/docs"><img alt="Docs" src="https://img.shields.io/badge/docs-read-blue"></a>
@@ -31,6 +32,7 @@
 - **多大模型集成**：支持 DeepSeek、Qwen、OpenAI、Gemini 等主流大模型，统一接口，灵活切换。
 - **多模态内容生成**：支持文本生成、文本生成图片（AIGC）、未来可扩展文本生成音频、视频等。
 - **一键多平台分发**：文章、图片、音频、视频可单独或组合一键分发到头条、抖音、公众号、视频号、小红书、哔哩哔哩等。
+- **依赖管理能力**：内置依赖包管理页面，支持依赖可视化、安装、升级、卸载、安全检测（npm audit），提升开发者体验。
 - **功能全面**: 提供从内容创作、一键发布、定时管理到数据统计分析的全链条自媒体运营支持。
 - **智能集成**: 深度融合主流大模型，助力用户高效创作爆款内容。
 - **易用性强**: 界面美观，操作流程简洁，降低自媒体运营门槛。
@@ -57,6 +59,9 @@
    - 图片生成（DeepSeek/Qwen/OpenAI）
    - 未来可扩展音频、视频生成
 8. **多平台分发**：支持主流内容平台一键分发
+9. **依赖管理**：
+   - 依赖包可视化、安装、升级、卸载
+   - 一键安全检测（npm audit）
 
 ## 安装与运行
 ### 前端
@@ -90,6 +95,12 @@ npm run dev
   - Qwen：POST /api/qwen/text, /api/qwen/image
   - OpenAI：POST /api/openai/text, /api/openai/image
   - Gemini：POST /api/gemini/text
+- **依赖管理**：
+  - 获取依赖列表：GET /api/deps/list
+  - 安装依赖：POST /api/deps/install
+  - 升级依赖：POST /api/deps/upgrade
+  - 卸载依赖：POST /api/deps/remove
+  - 依赖安全检测：GET /api/deps/audit
 
 ## 贡献
 欢迎提交Issue和Pull Request。
