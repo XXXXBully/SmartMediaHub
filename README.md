@@ -2,7 +2,7 @@
   <a href="https://github.com/aiseall/SmartMediaHub">
     <img src="assets/logo.png" alt="Logo" width="300">
   </a>
-</p>
+
   <br>
   <a href="https://github.com/iamgio/quarkdown/wiki"><img alt="Wiki" src="https://img.shields.io/badge/wiki-read-darkcyan"></a>
   <a href="https://quarkdown.com/docs"><img alt="Docs" src="https://img.shields.io/badge/docs-read-blue"></a>
