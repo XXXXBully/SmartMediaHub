@@ -106,3 +106,7 @@ npm run dev
 
 ## 许可证
 MIT 
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=aiseall/SmartMediaHub&type=Date)](https://www.star-history.com/#aiseall/SmartMediaHub&Date)
