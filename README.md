@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/aiseall/SmartMediaHub">
-    <img src="assets/logo.jpeg" alt="Logo" width="300">
+    <img src="assets/smh.jpeg" alt="Logo" width="300">
   </a>
 
   <br>
