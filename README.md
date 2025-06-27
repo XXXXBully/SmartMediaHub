@@ -23,6 +23,7 @@
 
 # 智媒通（SmartMediaHub）
 
+![SmartMediaHub Logo](smartmedialgog.jpeg)
 
 ## 项目简介
 智媒通是一个智能自媒体管理平台，支持头条号、公众号、抖音、小红书、哔哩哔哩一键发布，定时发布，阅读状态，用户活动等智能管理。平台深度集成了 DeepSeek、Qwen（通义千问）、OpenAI（GPT-3.5/4、DALL·E）、Gemini（Google Gemini）等主流大模型，支持智能生成文本、图片等多模态内容，实现一句话创作爆款自媒体文章和视频，并可一键分发到各大内容平台。
@@ -32,6 +33,7 @@
 - **多模态内容生成**：支持文本生成、文本生成图片（AIGC）、未来可扩展文本生成音频、视频等。
 - **一键多平台分发**：文章、图片、音频、视频可单独或组合一键分发到头条、抖音、公众号、视频号、小红书、哔哩哔哩等。
 - **依赖管理能力**：内置依赖包管理页面，支持依赖可视化、安装、升级、卸载、安全检测（npm audit），提升开发者体验。
+- **一键启动与终止脚本**：支持 Linux/MacOS（start-dev.sh、kill-dev.sh）和 Windows（start-dev-win.bat、kill-dev-win.bat）一键启动和终止前后端服务。
 - **功能全面**: 提供从内容创作、一键发布、定时管理到数据统计分析的全链条自媒体运营支持。
 - **智能集成**: 深度融合主流大模型，助力用户高效创作爆款内容。
 - **易用性强**: 界面美观，操作流程简洁，降低自媒体运营门槛。
@@ -61,6 +63,9 @@
 9. **依赖管理**：
    - 依赖包可视化、安装、升级、卸载
    - 一键安全检测（npm audit）
+10. **一键启动与终止脚本**：
+    - Linux/MacOS：`start-dev.sh`（启动）、`kill-dev.sh`（终止）
+    - Windows：`start-dev-win.bat`（启动）、`kill-dev-win.bat`（终止）
 
 ## 安装与运行
 ### 前端
@@ -75,6 +80,18 @@ npm run dev
 cd backend
 npm install
 npm run dev
+```
+
+### 一键启动与终止
+#### Linux/MacOS
+```bash
+./start-dev.sh   # 启动前后端
+./kill-dev.sh    # 终止前后端
+```
+#### Windows
+```
+start-dev-win.bat   # 启动前后端
+kill-dev-win.bat    # 终止前后端
 ```
 
 ## API文档
