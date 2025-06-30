@@ -1,14 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, Typography, Grid, Card, CardContent, Button, Avatar, Stack } from '@mui/material';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
 import ArticleIcon from '@mui/icons-material/Article';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import SettingsIcon from '@mui/icons-material/Settings';
+import LogoutIcon from '@mui/icons-material/Logout';
+import LoginIcon from '@mui/icons-material/Login';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import { useNavigate } from 'react-router-dom';
 
 const Dashboard: React.FC = () => {
   const navigate = useNavigate();
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    setIsAuthenticated(!!token);
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    setIsAuthenticated(false);
+    // Optionally, navigate to the login page after logout
+    navigate('/login');
+  };
+
+  const handleProtectedClick = (path: string) => {
+    if (!isAuthenticated) {
+      navigate('/login');
+    } else {
+      navigate(path);
+    }
+  };
 
   return (
     <Box sx={{ minHeight: '100vh', width: '100vw', maxWidth: '100vw', overflowX: 'hidden', background: 'linear-gradient(120deg, #101c2c 60%, #0ff 100%)', p: { xs: 2, md: 4 } }}>
@@ -18,9 +42,25 @@ const Dashboard: React.FC = () => {
           <Avatar src="/assets/logo.svg" sx={{ width: 48, height: 48, bgcolor: '#0ff' }} />
           <Typography variant="h4" sx={{ color: '#fff', fontWeight: 700, letterSpacing: 2 }}>智媒通 SmartMediaHub</Typography>
         </Stack>
-        <Stack direction="row" spacing={2} alignItems="center">
-          <Button color="inherit" startIcon={<SettingsIcon />} sx={{ color: '#0ff' }}>设置</Button>
-          <Avatar sx={{ bgcolor: '#0ff' }}>U</Avatar>
+        <Stack direction="row" spacing={1} alignItems="center">
+          {isAuthenticated ? (
+            <>
+              <Button color="inherit" startIcon={<SettingsIcon />} sx={{ color: '#0ff' }}>设置</Button>
+              <Avatar sx={{ bgcolor: '#0ff', color: '#101c2c' }}>U</Avatar>
+              <Button color="inherit" startIcon={<LogoutIcon />} onClick={handleLogout} sx={{ color: '#0ff' }}>
+                退出
+              </Button>
+            </>
+          ) : (
+            <>
+              <Button color="inherit" startIcon={<LoginIcon />} onClick={() => navigate('/login')} sx={{ color: '#0ff' }}>
+                登录
+              </Button>
+              <Button color="inherit" startIcon={<PersonAddIcon />} onClick={() => navigate('/register')} sx={{ color: '#0ff' }}>
+                注册
+              </Button>
+            </>
+          )}
         </Stack>
       </Stack>
 
@@ -28,8 +68,8 @@ const Dashboard: React.FC = () => {
       <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: { xs: 400, md: 420 }, width: '100%' }}>
         {/* 快速入口卡片 */}
         <Grid container spacing={3} sx={{ mb: 4, maxWidth: 1200 }} justifyContent="center">
-          <Grid item xs={12} md={3}>
-            <Card sx={{ bgcolor: '#18243a', color: '#0ff', borderRadius: 3, boxShadow: 3, cursor: 'pointer' }} onClick={() => navigate('/content-publish')}>
+          <Grid item xs={12} sm={6} md={3}>
+            <Card sx={{ bgcolor: '#18243a', color: '#0ff', borderRadius: 3, boxShadow: 3, cursor: 'pointer' }} onClick={() => handleProtectedClick('/content-publish')}>
               <CardContent>
                 <SmartToyIcon sx={{ fontSize: 40 }} />
                 <Typography variant="h6" sx={{ mt: 2 }}>智能内容创作</Typography>
@@ -37,8 +77,8 @@ const Dashboard: React.FC = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} md={3}>
-            <Card sx={{ bgcolor: '#18243a', color: '#0ff', borderRadius: 3, boxShadow: 3, cursor: 'pointer' }} onClick={() => navigate('/platform-accounts')}>
+          <Grid item xs={12} sm={6} md={3}>
+            <Card sx={{ bgcolor: '#18243a', color: '#0ff', borderRadius: 3, boxShadow: 3, cursor: 'pointer' }} onClick={() => handleProtectedClick('/platform-accounts')}>
               <CardContent>
                 <CloudUploadIcon sx={{ fontSize: 40 }} />
                 <Typography variant="h6" sx={{ mt: 2 }}>平台账号管理</Typography>
@@ -46,8 +86,8 @@ const Dashboard: React.FC = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} md={3}>
-            <Card sx={{ bgcolor: '#18243a', color: '#0ff', borderRadius: 3, boxShadow: 3, cursor: 'pointer' }} onClick={() => navigate('/data-statistics')}>
+          <Grid item xs={12} sm={6} md={3}>
+            <Card sx={{ bgcolor: '#18243a', color: '#0ff', borderRadius: 3, boxShadow: 3, cursor: 'pointer' }} onClick={() => handleProtectedClick('/data-statistics')}>
               <CardContent>
                 <BarChartIcon sx={{ fontSize: 40 }} />
                 <Typography variant="h6" sx={{ mt: 2 }}>数据统计</Typography>
@@ -55,8 +95,8 @@ const Dashboard: React.FC = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} md={3}>
-            <Card sx={{ bgcolor: '#18243a', color: '#0ff', borderRadius: 3, boxShadow: 3, cursor: 'pointer' }} onClick={() => navigate('/dependency-manager')}>
+          <Grid item xs={12} sm={6} md={3}>
+            <Card sx={{ bgcolor: '#18243a', color: '#0ff', borderRadius: 3, boxShadow: 3, cursor: 'pointer' }} onClick={() => handleProtectedClick('/dependency-manager')}>
               <CardContent>
                 <ArticleIcon sx={{ fontSize: 40 }} />
                 <Typography variant="h6" sx={{ mt: 2 }}>依赖管理</Typography>
